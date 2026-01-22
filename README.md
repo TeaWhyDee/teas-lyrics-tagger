@@ -16,7 +16,7 @@ Tested with Python 3.11.5, 3.15.
 
 # Run
 The script will run in an interactive mode by default.
-The script will always skip a song if the lyrics tag is already set,
+The script will always skip a file if the lyrics tag is already set,
 unless the force option is specified.
 
 Run `python main.py -h` for options.
@@ -38,17 +38,16 @@ options:
   -y, --always_yes      save the lyrics without asking the user first
 ```
 
-Example output:
+Example usage `python main.py -t $GENIUS_TOKEN ./file.mp3 -s "Kkaydes For What"`:
 ```bash
-Search string: Kkaydes For What
------ Found song: Kkaydes - For What
+./file.mp3
+--- Search string: Kkaydes For What
+--- Found song "Kkaydes - For What" with lyrics:
 For what?
 
---- Are these correct? [<ctrl-d>=yes, input=correct lyrics]
+--- Are these lyrics correct? [<ctrl-d>=yes, input=correct lyrics]
 These are manually typed lyrics.
---- Saving provided lyrics..
-
-=========================
+--- Saving provided lyrics
 ```
 
 There is an extra script `print_tag.py` for printing all or individual tags.
