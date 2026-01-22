@@ -29,17 +29,17 @@ positional arguments:
 
 options:
   -h, --help            show this help message and exit
-  -t, --token TOKEN     Genius token
+  -t, --token TOKEN     Genius API token
   -s, --search_string SEARCH_STRING
-                        specify the Genius API search string (usually 'artist track_title')
+                        set the Genius API search string (usually 'artist track_title')
   -l, --lyrics LYRICS   set the provided lyrics non-interactively
   -m, --manual          manual interactive mode. Manually set lyrics to one or multiple files
-  -f, --force           add/replace lyrics tag even the tag is already present
-  -y, --always_yes      save the lyrics without asking the user first
+  -f, --force           set the lyrics tag even the tag is already present
+  -y, --always_yes      set the lyrics tag without asking the user for confirmation
 ```
 
-Example usage `python main.py -t $GENIUS_TOKEN ./file.mp3 -s "Kkaydes For What"`:
-```bash
+Example usage `python main.py -t $TOKEN ./file.mp3 -s "Kkaydes For What"`:
+```
 ./file.mp3
 --- Search string: Kkaydes For What
 --- Found song "Kkaydes - For What" with lyrics:
@@ -50,7 +50,7 @@ These are manually typed lyrics.
 --- Saving provided lyrics
 ```
 
-There is an extra script `print_tag.py` for printing all or individual tags.
+There is an extra script `print_tag.py` for printing all tags or a specified tags.
 
 # Development
 This codebase uses exceptions for flow control, yikes!
